@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import SendingMsg from "./Message";
 import { t } from "i18next";
 
@@ -6,10 +6,10 @@ function Modal({ onClose, heading, paragraph }) {
   const { sendMessage, error, loading, success } = SendingMsg();
   const [isVisible, setIsVisible] = useState(false);
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setIsVisible(false);
     setTimeout(onClose, 300);
-  };
+  }, [onClose]);
 
   useEffect(() => {
     setIsVisible(true);
@@ -19,7 +19,7 @@ function Modal({ onClose, heading, paragraph }) {
         handleClose();
       }, 1000);
     }
-  }, [success, onClose, handleClose]);
+  }, [success, handleClose]);
 
   return (
     <div
