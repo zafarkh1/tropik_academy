@@ -33,7 +33,7 @@ function Courses(props) {
   ];
 
   return (
-    <div className="my-16">
+    <div id="courses" className="my-16">
       <h2 className="md:text-5xl text-2xl text-center font-medium">
         {t("course.header")}
       </h2>

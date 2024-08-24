@@ -1,8 +1,10 @@
+import { Link } from "react-scroll";
 import Button from "../../utils/Button";
 import { useTranslation } from "react-i18next";
 
 function Showcase(props) {
   const { t } = useTranslation();
+  const navbarHeight = 84;
 
   return (
     <div
@@ -30,10 +32,20 @@ function Showcase(props) {
           </p>
         </div>
         <div className="mt-5">
-          <Button
-            title={t("showcase.buttonText")}
-            padding="1.5rem 1.8rem"
-          ></Button>
+          <Link
+            to={"courses"}
+            spy={true}
+            smooth={true}
+            offset={-navbarHeight}
+            duration={1500}
+            href={"courses"}
+          >
+            <Button
+              title={t("showcase.buttonText")}
+              padding="1.5rem 1.8rem"
+            ></Button>
+          </Link>
+
           <p className="mt-3 ml-4">{t("showcase.promoText")}</p>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import { FaTimes } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -7,11 +8,13 @@ function Navbar() {
   const { t, i18n } = useTranslation();
   const [open, setOpen] = useState(false);
 
+  const navbarHeight = 84;
+
   const list = [
-    { title: t("whyUs"), link: "/" },
-    { title: t("results"), link: "/" },
-    { title: t("courses"), link: "/" },
-    { title: t("faq"), link: "/" },
+    { title: t("whyUs"), link: "advantages" },
+    { title: t("results"), link: "results" },
+    { title: t("courses"), link: "courses" },
+    { title: t("faq"), link: "faq" },
   ];
 
   const handleChange = (e) => {
@@ -25,7 +28,7 @@ function Navbar() {
     >
       <div className="md:flex md:justify-between md:items-center md:px-10 px-7 py-4">
         <div className="navbar-logo flex items-center gap-5">
-          <a href="/">
+          <a href="">
             <img src="/images/logo.png" alt="logo" className="h-12" />
           </a>
           <p className="w-[12rem] text-sm hidden md:block">{t("logoText")}</p>
@@ -56,18 +59,23 @@ function Navbar() {
               key={index}
               className="lg:text-xl text-xl md:text-base md:my-0 my-7"
             >
-              <a
+              <Link
+                to={item.link}
+                spy={true}
+                smooth={true}
+                offset={-navbarHeight} // Adjust offset to account for fixed navbar height
+                duration={1500}
                 href={item.link}
                 className="text-gray-800 hover:text-gray-400 transition-colors duration-500"
               >
                 {item.title}
-              </a>
+              </Link>
             </li>
           ))}
 
           <li className="lg:text-xl text-xl md:text-base md:my-0 my-7">
             <a
-              href="/"
+              href="tel:+998333060098"
               className="text-gray-800 hover:text-gray-400 transition-colors duration-500"
             >
               <p>+998 (33) 306 0098</p>

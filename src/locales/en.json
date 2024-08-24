@@ -92,6 +92,9 @@
     "tel": "Phone number",
     "sending": "Sending",
     "success": "Successfully sent"
-}
+},
+"modal": {
+      "btnFree": "Darsga bepul yozilish"
+    }
 
 }

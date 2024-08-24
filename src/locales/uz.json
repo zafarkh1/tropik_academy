@@ -92,5 +92,8 @@
       "tel": "Telefon raqam",
       "sending" : "Yuborilmoqda",
       "success": "Muvaffaqiyatli jo'natildi"
+    },
+    "modal": {
+      "btnFree": "Darsga bepul yozilish"
     }
 }

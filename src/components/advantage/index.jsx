@@ -32,7 +32,7 @@ function Advantage(props) {
   ];
 
   return (
-    <div className="mt-10 md:px-[6rem] px-16">
+    <div id="advantages" className="mt-10 md:px-[6rem] px-16">
       <h2 className="md:text-4xl text-2xl font-medium text-center">
         {t("advantage.header")}
       </h2>

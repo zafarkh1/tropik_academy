@@ -1,56 +1,10 @@
 import { useTranslation } from "react-i18next";
 import Button from "../../utils/Button";
-import axios from "axios";
-import { useState, useEffect } from "react";
+import SendingMsg from "../../utils/Message";
 
 function Message(props) {
   const { t } = useTranslation();
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState("");
-
-  const sendMessage = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setSuccess(false);
-    setError("");
-
-    const token = "7389531994:AAE3VRO4wVMfCkUzx7JNQjyATf8h28ragjE";
-    const chatId = -1002185308774;
-    const url = `https://api.telegram.org/bot${token}/sendMessage`;
-
-    const name = e.target.elements.name.value;
-    const tel = e.target.elements.tel.value;
-
-    axios({
-      method: "POST",
-      url: url,
-      data: {
-        chat_id: chatId,
-        text: `Name: ${name}\nTelephone: ${tel}`,
-      },
-    })
-      .then((res) => {
-        setLoading(false);
-        setSuccess(true);
-        e.target.reset();
-      })
-      .catch((err) => {
-        setLoading(false);
-        setError("Oops! Something went wrong. Please try again.");
-      });
-  };
-
-  useEffect(() => {
-    if (success || error) {
-      const timer = setTimeout(() => {
-        setSuccess(false);
-        setError("");
-      }, 4000000); // 4 seconds
-
-      return () => clearTimeout(timer);
-    }
-  }, [success, error]);
+  const { sendMessage, error, loading, success } = SendingMsg();
 
   return (
     <div className="relative bg-purple-100 rounded-xl my-16 p-8 flex flex-col md:flex-row md:items-start md:justify-between md:mx-[10rem]">
@@ -62,11 +16,7 @@ function Message(props) {
           {t("message.desc")}
         </p>
       </div>
-      <form
-        action=""
-        className="flex flex-col gap-6 md:w-[25rem]"
-        onSubmit={sendMessage}
-      >
+      <form className="flex flex-col gap-6 md:w-[25rem]" onSubmit={sendMessage}>
         <input
           id="name"
           type="text"

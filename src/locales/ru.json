@@ -92,6 +92,9 @@
     "tel": "Номер телефона",
     "sending": "Отправка",
     "success": "Успешно отправлено"
-}
+},
+"modal": {
+      "btnFree": "Darsga bepul yozilish"
+    }
 
 }

@@ -38,7 +38,7 @@ function Faq() {
   };
 
   return (
-    <div className="my-16">
+    <div id="faq" className="my-16">
       <h2 className="text-3xl md:text-5xl font-bold text-center mb-10">
         {t("faqs.heading")}
       </h2>
@@ -54,11 +54,15 @@ function Faq() {
                 {selected === item.id ? "-" : "+"}
               </span>
             </div>
-            {selected === item.id && (
+            <div
+              className={`overflow-hidden transition-all duration-1000 ease-in ${
+                selected === item.id ? "max-h-screen opacity-100" : "max-h-0"
+              }`}
+            >
               <div className="p-5 text-left text-gray-700 bg-gray-50">
                 {item.answer}
               </div>
-            )}
+            </div>
           </div>
         ))}
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Button({ title, padding }) {
+function Button({ title, padding, onClick }) {
   const myStyle = {
     backgroundColor: "rgb(100, 177, 174)",
     padding: padding,
@@ -8,10 +8,35 @@ function Button({ title, padding }) {
     color: "#fff",
     textTransform: "uppercase",
     wordSpacing: "1px",
+    cursor: "pointer",
+    transition: "all 0.3s ease-in-out",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+  };
+
+  const hoverStyle = {
+    backgroundColor: "rgb(80, 157, 154)",
+    boxShadow: "0 6px 12px rgba(0, 0, 0, 0.2)",
+    transform: "translateY(-2px)",
+  };
+
+  const activeStyle = {
+    transform: "scale(0.95)",
   };
 
   return (
-    <button style={myStyle} type="submit">
+    <button
+      style={myStyle}
+      type="submit"
+      onClick={onClick}
+      onMouseEnter={(e) =>
+        (e.target.style.backgroundColor = hoverStyle.backgroundColor)
+      }
+      onMouseLeave={(e) =>
+        (e.target.style.backgroundColor = myStyle.backgroundColor)
+      }
+      onMouseDown={(e) => (e.target.style.transform = activeStyle.transform)}
+      onMouseUp={(e) => (e.target.style.transform = "scale(1)")}
+    >
       {title}
     </button>
   );
