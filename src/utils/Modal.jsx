@@ -6,6 +6,11 @@ function Modal({ onClose, heading, paragraph }) {
   const { sendMessage, error, loading, success } = SendingMsg();
   const [isVisible, setIsVisible] = useState(false);
 
+  const handleClose = () => {
+    setIsVisible(false);
+    setTimeout(onClose, 300);
+  };
+
   useEffect(() => {
     setIsVisible(true);
 
@@ -15,11 +20,6 @@ function Modal({ onClose, heading, paragraph }) {
       }, 1000);
     }
   }, [success, onClose, handleClose]);
-
-  const handleClose = () => {
-    setIsVisible(false);
-    setTimeout(onClose, 300);
-  };
 
   return (
     <div
