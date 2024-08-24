@@ -1,34 +1,44 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SendingMsg from "./Message";
 import { t } from "i18next";
 
-function Modal({ onClose }) {
+function Modal({ onClose, heading, paragraph }) {
   const { sendMessage, error, loading, success } = SendingMsg();
+  const [isVisible, setIsVisible] = useState(false);
 
-  // Close modal when the message is successfully sent
   useEffect(() => {
+    setIsVisible(true);
+
     if (success) {
-      onClose();
+      setTimeout(() => {
+        handleClose();
+      }, 1000);
     }
   }, [success, onClose]);
 
+  const handleClose = () => {
+    setIsVisible(false);
+    setTimeout(onClose, 300);
+  };
+
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50">
-      {/* Overlay */}
+    <div
+      className={`fixed inset-0 flex items-center justify-center z-50 transition-opacity duration-300 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
       <div
         className="absolute inset-0 bg-black bg-opacity-50"
-        onClick={onClose}
+        onClick={handleClose}
       ></div>
 
-      {/* Modal Content */}
-      <div className="relative bg-white md:w-1/3 w-[90%] p-10 rounded-lg shadow-lg z-10">
-        <h2 className="text-center md:text-2xl font-medium mb-4">
-          O'z ma'lumotlaringizni qoldiring
-        </h2>
-        <p className="text-center mb-6">
-          Sizga to'liqroq ma'lumot berish uchun mutaxassislarimiz siz bilan
-          bog'lanishadi
-        </p>
+      <div
+        className={`relative bg-white lg:w-1/3 md:w-2/3 w-[90%] p-10 rounded-lg shadow-lg z-10 transform transition-transform duration-300 ${
+          isVisible ? "scale-100" : "scale-95"
+        }`}
+      >
+        <h2 className="text-center md:text-3xl font-medium mb-4">{heading}</h2>
+        <p className="text-center mb-6">{paragraph}</p>
         <form onSubmit={sendMessage} className="flex flex-col gap-4">
           <input
             id="name"

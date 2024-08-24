@@ -38,28 +38,28 @@ function Faq() {
   };
 
   return (
-    <div id="faq" className="my-16">
-      <h2 className="text-3xl md:text-5xl font-bold text-center mb-10">
+    <div id="faq" className="lg:my-16 md:my-8 my-5">
+      <h2 className="lg:text-5xl text-2xl font-bold text-center lg:mb-10">
         {t("faqs.heading")}
       </h2>
-      <div className="md:px-40 space-y-4 px-8">
+      <div className="xl:px-40 space-y-4 p-6">
         {data.map((item) => (
           <div key={item.id} className="shadow-lg rounded-lg overflow-hidden">
             <div
-              className="flex justify-between items-center text-xl bg-gray-100 hover:bg-gray-200 transition-all cursor-pointer p-5"
+              className="flex justify-between items-center lg:text-xl bg-gray-100 hover:bg-gray-200 transition-all cursor-pointer lg:p-5 p-3 py-4"
               onClick={() => handleAccordion(item.id)}
             >
               <p className="font-medium">{item.question}</p>
-              <span className="text-2xl text-gray-600">
+              <span className="text-gray-600">
                 {selected === item.id ? "-" : "+"}
               </span>
             </div>
             <div
-              className={`overflow-hidden transition-all duration-1000 ease-in ${
+              className={`lg:text-xl overflow-hidden transition-all duration-1000 ease-in ${
                 selected === item.id ? "max-h-screen opacity-100" : "max-h-0"
               }`}
             >
-              <div className="p-5 text-left text-gray-700 bg-gray-50">
+              <div className="lg:p-5 p-3 py-4 text-left text-gray-700 bg-gray-50">
                 {item.answer}
               </div>
             </div>

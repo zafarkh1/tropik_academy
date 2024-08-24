@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../utils/Button";
 import { useTranslation } from "react-i18next";
+import Modal from "../../utils/Modal";
 
 function Courses(props) {
+  const [selectedItemId, setSelectedItemId] = useState(null);
   const { t } = useTranslation();
 
   const items = [
@@ -32,16 +34,21 @@ function Courses(props) {
     },
   ];
 
+  const paragraph =
+    "Bepul darsga o'z joyingizni band qilish uchun ma'lumotlaringizni qoldiring va biz siz bilan tez orada bog'lanamiz";
+
+  const selectedItem = items.find((item) => item.id === selectedItemId);
+
   return (
-    <div id="courses" className="my-16">
-      <h2 className="md:text-5xl text-2xl text-center font-medium">
+    <div id="courses" className="lg:my-16 my-8">
+      <h2 className="lg:text-5xl text-2xl text-center font-medium">
         {t("course.header")}
       </h2>
-      <div className="my-12 md:px-[6rem] grid sm:grid-cols-1 lg:grid-cols-3 gap-8 px-[4rem]">
+      <div className="lg:my-12 my-6 lg:px-[6rem] px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {items.map((item) => (
           <div
-            className="flex flex-col bg-gray-200 rounded-3xl overflow-hidden"
             key={item.id}
+            className="flex flex-col bg-gray-200 rounded-3xl overflow-hidden"
           >
             <div className="h-48 md:h-60 w-full">
               <img
@@ -51,21 +58,19 @@ function Courses(props) {
               />
             </div>
 
-            <div className="px-6 py-4 flex flex-col justify-between flex-grow">
-              <div className="flex items-center justify-between mb-6">
+            <div className="lg:px-6 px-4 py-4  flex flex-col justify-between flex-grow">
+              <div className="flex items-center justify-between lg:mb-6 mb-3">
                 <p className="text-xl font-medium">{item.type}</p>
-                <Button
-                  title={`${t("course.durationLabel")} ${item.duration}`}
-                  padding="0.1rem 1rem"
-                />
+                <button className="px-3 py-1 bg-teal-400 text-white text-xs rounded-md">{`${t(
+                  "course.durationLabel"
+                )} ${item.duration}`}</button>
               </div>
-
-              <p className="mb-6">{item.desc}</p>
-
+              <p className="lg:mb-6 mb-3 lg:text-base text-sm">{item.desc}</p>
               <div className="mt-auto flex items-center justify-between">
                 <Button
                   title={t("course.registerButton")}
                   padding="0.3rem 1.2rem"
+                  onClick={() => setSelectedItemId(item.id)}
                 />
                 <p className="text-teal-600">
                   {item.price} {t("course.perMonth")}
@@ -75,6 +80,14 @@ function Courses(props) {
           </div>
         ))}
       </div>
+
+      {selectedItem && (
+        <Modal
+          onClose={() => setSelectedItemId(null)}
+          heading={selectedItem.type}
+          paragraph={paragraph}
+        />
+      )}
     </div>
   );
 }

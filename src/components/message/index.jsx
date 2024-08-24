@@ -7,9 +7,9 @@ function Message(props) {
   const { sendMessage, error, loading, success } = SendingMsg();
 
   return (
-    <div className="relative bg-purple-100 rounded-xl my-16 p-8 flex flex-col md:flex-row md:items-start md:justify-between md:mx-[10rem]">
+    <div className="relative bg-purple-100 md:rounded-xl lg:my-16 sm:my-8 p-8 flex flex-col md:flex-row md:items-start md:justify-between md:gap-8 xl:mx-[10rem] sm:mx-6">
       <div className="mb-8 md:mb-0 md:max-w-[450px]">
-        <h2 className="text-2xl md:text-4xl font-semibold md:leading-[3rem] mb-4 md:mb-10">
+        <h2 className="text-2xl lg:text-4xl font-semibold lg:leading-[3rem] mb-4 lg:mb-10">
           {t("message.heading")}
         </h2>
         <p className="text-base md:text-lg text-gray-700">

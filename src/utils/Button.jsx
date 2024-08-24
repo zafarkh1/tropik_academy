@@ -6,7 +6,6 @@ function Button({ title, padding, onClick }) {
     padding: padding,
     borderRadius: "3rem",
     color: "#fff",
-    textTransform: "uppercase",
     wordSpacing: "1px",
     cursor: "pointer",
     transition: "all 0.3s ease-in-out",

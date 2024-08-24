@@ -5,28 +5,32 @@ function Scholarship(props) {
   const { t } = useTranslation();
 
   return (
-    <div className="my-[3rem]">
-      <h2 className="md:text-6xl text-4xl text-center md:leading-[6rem] leading-[3rem] md:px-[10rem] px-[5rem]">
+    <div className="lg:my-[3rem] my-8 lg:px-[6rem] px-6">
+      <h2 className="lg:text-4xl text-2xl text-center leading-8 font-medium">
         {t("scholarship.title")}
       </h2>
-      <div className="mt-[5rem] md:flex md:items-center gap-[5rem]">
-        <div className="md:px-0 px-[5rem]">
-          <img src="/images/scholarship.png" alt="sa" />
+      <div className="lg:mt-[3rem] mt-8 lg:flex lg:items-center lg:gap-[1rem]">
+        <div className="lg:w-1/2 sm:w-2/3 w-full flex justify-center lg:justify-start">
+          <img
+            src="/images/scholarship.png"
+            alt="Scholarship"
+            className="w-full h-auto lg:max-w-[90%] object-contain"
+          />
         </div>
-        <div className="md:my-0 my-10 md:px-0 px-10">
-          <div className="mb-10">
-            <h3 className="md:text-3xl text-2xl mb-6 font-medium">
+        <div className="lg:w-1/2 w-full lg:my-0 my-10">
+          <div className="lg:mb-10 mb-5">
+            <h3 className="lg:text-3xl text-2xl lg:mb-6 mb-3 font-medium">
               {t("scholarship.gksGrantTitle")}
             </h3>
-            <p className="text-xl leading-8">
+            <p className="lg:text-xl lg:leading-8">
               {t("scholarship.gksGrantDescription")}
             </p>
           </div>
           <div>
-            <h3 className="md:text-3xl text-2xl mb-6 font-medium">
+            <h3 className="lg:text-3xl text-2xl lg:mb-6 mb-3 font-medium">
               {t("scholarship.whatGKSProvidesTitle")}
             </h3>
-            <ul className="text-xl list-disc leading-8 ml-5">
+            <ul className="lg:text-xl list-disc lg:leading-8 ml-5">
               <li>{t("scholarship.whatGKSProvides.point1")}</li>
               <li>{t("scholarship.whatGKSProvides.point2")}</li>
               <li>{t("scholarship.whatGKSProvides.point3")}</li>
