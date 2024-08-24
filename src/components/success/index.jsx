@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
-import Button from "../../utils/Button";
 import { useTranslation } from "react-i18next";
 import Modal from "../../utils/Modal";
 

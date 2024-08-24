@@ -1,5 +1,3 @@
-import React from "react";
-
 function Button({ title, padding, onClick }) {
   const myStyle = {
     backgroundColor: "rgb(100, 177, 174)",

@@ -1,5 +1,4 @@
 import { Link } from "react-scroll";
-import Button from "../../utils/Button";
 import { useTranslation } from "react-i18next";
 
 function Showcase(props) {
@@ -18,11 +17,11 @@ function Showcase(props) {
         </h1>
         <div className="sm:flex sm:gap-10 lg:text-lg sm:text-base text-sm ">
           <p className="flex items-center lg:gap-5 gap-3 w-[17rem]">
-            <img src="/images/barg1.png" className="lg:h-16 h-10" />
+            <img src="/images/barg1.png" className="lg:h-16 h-10" alt="sa" />
             {t("showcase.benefit1")}
           </p>
           <p className="flex items-center lg:gap-5 gap-3 w-[17rem] md:mt-0 mt-10">
-            <img src="/images/barg1.png" className="lg:h-16 h-10" />
+            <img src="/images/barg1.png" className="lg:h-16 h-10" alt="sa" />
             {t("showcase.benefit2")}
           </p>
         </div>

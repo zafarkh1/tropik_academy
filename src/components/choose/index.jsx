@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import Button from "../../utils/Button";
 import Modal from "../../utils/Modal";
 
 function Choose(props) {
@@ -42,11 +41,6 @@ function Choose(props) {
         ))}
       </div>
       <div className="flex justify-center mt-10">
-        {/* <Button
-          title={t("choose.button")}
-          padding="1.5rem 5rem"
-          onClick={() => setOpen(true)}
-        /> */}
         <button
           className="lg:px-12 px-8 lg:py-6 py-3 lg:rounded-3xl rounded-lg shadow-md shadow-slate-400 bg-teal-400 text-white
          hover:bg-teal-500 active:scale-95"
