@@ -14,7 +14,7 @@ function Modal({ onClose, heading, paragraph }) {
         handleClose();
       }, 1000);
     }
-  }, [success, onClose]);
+  }, [success, onClose, handleClose]);
 
   const handleClose = () => {
     setIsVisible(false);
