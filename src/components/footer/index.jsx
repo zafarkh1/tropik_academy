@@ -27,7 +27,7 @@ function Footer(props) {
     <footer className="bg-gray-800 text-white lg:rounded-2xl mb-4 mx-0 xl:mx-16 md:mx-6 md:rounded-md p-6 md:p-10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
         <div className="flex justify-center md:justify-start">
-          <a href="">
+          <a href="showcase">
             <img
               src="/images/logo_footer.svg"
               alt="Logo"
@@ -56,6 +56,7 @@ function Footer(props) {
           {socialMedia.map((item, index) => (
             <li key={index}>
               <a
+                rel="noopener noreferrer"
                 href={item.link}
                 className="hover:text-gray-300 transition-colors duration-300"
                 target="_blank"

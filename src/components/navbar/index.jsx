@@ -28,7 +28,7 @@ function Navbar() {
     >
       <div className="lg:flex lg:justify-between lg:items-center lg:px-10 px-7 py-4">
         <div className="navbar-logo flex items-center gap-5">
-          <a href="">
+          <a href="showcase">
             <img src="/images/logo.png" alt="logo" className="h-12" />
           </a>
           <p className="w-[12rem] text-sm hidden lg:block">{t("logoText")}</p>
