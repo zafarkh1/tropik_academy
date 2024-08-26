@@ -16,6 +16,8 @@
     "choose": {
         "heading": "TOPIK academy is definitely for you if you:",
         "button": "Yes, that's me",
+        "modalHeading": "Leave your information",
+        "modalParagraph": "Our specialists will contact you to provide you with more detailed information",
         "item1": "You want to start speaking Korean in a short time",
         "item2": "You want to learn Korean and build your career",
         "item3": "You want to get a Topik certificate and win a GRANT to prestigious universities in Korea",
@@ -54,7 +56,8 @@
       "durationLabel": "Duration",
       "registerButton": "Register",
       "perMonth": "/month",
-      "month": "mth"
+      "month": "mth",
+      "modalDesc": "To reserve your place on a free lesson, leave your details and we'll get back to you shortly"
     },
     "advantage": {
       "header": "Why choose TOPIK academy?",
@@ -94,7 +97,7 @@
     "success": "Successfully sent"
 },
 "modal": {
-      "btnFree": "Darsga bepul yozilish"
+      "btnFree": "Join free"
     }
 
 }

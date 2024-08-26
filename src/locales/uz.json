@@ -16,6 +16,8 @@
     "choose": {
     "heading": "TOPIK academy aniq siz uchun agar siz:",
     "button": "Ha, bu men",
+    "modalHeading": "O'z ma'lumotlaringizni qoldiring",
+    "modalParagraph": "Sizga to'liqroq ma'lumot berish uchun mutaxassislarimiz siz bilan bog'lanishadi",
     "item1": "Qisqa muddat ichida Koreys tilida gapirishni istaysiz",
     "item2": "Koreys tili o’rganib o’z karyerangizni qurmoqchisiz",
     "item3": "Topik sertifikatini olib Koreyaning nufuzli universitetlariga GRANT yutmoqchisiz",
@@ -54,7 +56,8 @@
         "durationLabel": "Davomiyligi",
         "registerButton": "Ro'yhatdan o'tish",
         "perMonth": "/oy",
-        "month": "oy"
+        "month": "oy",
+        "modalDesc": "Bepul darsga o'z joyingizni band qilish uchun ma'lumotlaringizni qoldiring va biz siz bilan tez orada bog'lanamiz"
       },
       "advantage": {
       "header": "Nima uchun aynan TOPIK academy?",

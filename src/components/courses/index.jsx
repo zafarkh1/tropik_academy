@@ -33,8 +33,7 @@ function Courses(props) {
     },
   ];
 
-  const paragraph =
-    "Bepul darsga o'z joyingizni band qilish uchun ma'lumotlaringizni qoldiring va biz siz bilan tez orada bog'lanamiz";
+  const paragraph = t("course.modalDesc");
 
   const selectedItem = items.find((item) => item.id === selectedItemId);
 

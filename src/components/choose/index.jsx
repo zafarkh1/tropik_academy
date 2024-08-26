@@ -15,9 +15,8 @@ function Choose(props) {
     { img: "/images/choose6.png", title: t("choose.item6") },
   ];
 
-  const heading = "O'z ma'lumotlaringizni qoldiring";
-  const paragraph =
-    "Sizga to'liqroq ma'lumot berish uchun mutaxassislarimiz siz bilan bog'lanishadi";
+  const heading = t("choose.modalHeading");
+  const paragraph = t("choose.modalParagraph");
 
   return (
     <div className="relative lg:px-[8rem] lg:py-[5rem] py-10 px-6">

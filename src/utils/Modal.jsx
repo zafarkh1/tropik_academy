@@ -74,7 +74,7 @@ function Modal({ onClose, heading, paragraph }) {
                 d="M5 13l4 4L19 7"
               ></path>
             </svg>
-            <p className="text-green-700">zor</p>
+            <p className="text-green-700">{t("message.success")}</p>
           </div>
         )}
         {error && (

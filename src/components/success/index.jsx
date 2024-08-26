@@ -10,9 +10,8 @@ function Success(props) {
   const url = "/images/result.png";
   const repeatedImg = Array(10).fill(url);
 
-  const heading = "O'z ma'lumotlaringizni qoldiring";
-  const paragraph =
-    "Sizga to'liqroq ma'lumot berish uchun mutaxassislarimiz siz bilan bog'lanishadi";
+  const heading = t("choose.modalHeading");
+  const paragraph = t("choose.modalParagraph");
 
   return (
     <div className="lg:my-[3rem] my-8 lg:ml-[6rem] lg:px-0 px-6 flex flex-col items-center justify-center ">
