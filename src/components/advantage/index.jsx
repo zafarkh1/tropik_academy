@@ -33,15 +33,17 @@ function Advantage(props) {
 
   return (
     <div id="advantages" className="lg:mt-10 mt-4 lg:px-[6rem] px-6">
-      <h2 className="lg:text-4xl text-2xl font-medium text-center">
+      <h2 className="lg:text-5xl text-2xl font-medium text-center">
         {t("advantage.header")}
       </h2>
       <div className="lg:mt-14 mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16 gap-10">
         {items.map((item, index) => (
           <div className="relative" key={index}>
-            <div className="lg:px-6 px-4 lg:py-10 py-6 rounded-2xl bg-slate-100 lg:min-h-52 sm:min-h-36">
-              <h4 className="md:text-2xl text-xl lg:mb-6 mb-2">{item.title}</h4>
-              <p className="lg:text-base text-sm">{item.desc}</p>
+            <div className="lg:px-6 px-4 lg:py-10 py-6 rounded-2xl bg-slate-100 lg:min-h-64 md:min-h-40 sm:min-h-36">
+              <h4 className="md:text-2xl text-xl lg:mb-6 mb-2 font-medium">
+                {item.title}
+              </h4>
+              <p className="lg:text-lg md:text-base text-sm">{item.desc}</p>
             </div>
             <div className="absolute top-[-1rem] left-7">
               <span className="text-white bg-green-500 lg:text-3xl text-xl lg:p-4 p-3 rounded-lg font-bold">

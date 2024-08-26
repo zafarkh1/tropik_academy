@@ -6,7 +6,7 @@ function Scholarship(props) {
 
   return (
     <div className="lg:my-[3rem] my-8 lg:px-[6rem] px-6">
-      <h2 className="lg:text-4xl text-2xl text-center leading-8 font-medium">
+      <h2 className="lg:text-5xl text-2xl text-center leading-8 font-medium">
         {t("scholarship.title")}
       </h2>
       <div className="lg:mt-[3rem] mt-8 lg:flex lg:items-center lg:gap-[1rem]">
@@ -19,18 +19,18 @@ function Scholarship(props) {
         </div>
         <div className="lg:w-1/2 w-full lg:my-0 my-10">
           <div className="lg:mb-10 mb-5">
-            <h3 className="lg:text-3xl text-2xl lg:mb-6 mb-3 font-medium">
+            <h3 className="lg:text-3xl text-xl lg:mb-6 mb-3 font-medium">
               {t("scholarship.gksGrantTitle")}
             </h3>
-            <p className="lg:text-xl lg:leading-8">
+            <p className="lg:text-lg md:text-base text-sm lg:leading-8">
               {t("scholarship.gksGrantDescription")}
             </p>
           </div>
           <div>
-            <h3 className="lg:text-3xl text-2xl lg:mb-6 mb-3 font-medium">
+            <h3 className="lg:text-3xl text-xl lg:mb-6 mb-3 font-medium">
               {t("scholarship.whatGKSProvidesTitle")}
             </h3>
-            <ul className="lg:text-xl list-disc lg:leading-8 ml-5">
+            <ul className="lg:text-lg md:text-base text-sm list-disc lg:leading-8 ml-5">
               <li>{t("scholarship.whatGKSProvides.point1")}</li>
               <li>{t("scholarship.whatGKSProvides.point2")}</li>
               <li>{t("scholarship.whatGKSProvides.point3")}</li>

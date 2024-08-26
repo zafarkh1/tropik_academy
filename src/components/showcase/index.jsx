@@ -12,9 +12,9 @@ function Showcase(props) {
           <img src="/images/Rectangle.png" alt="sa" className="h-[1px] w-10" />
           <span className="lg:text-lg text-sm">{t("showcase.subtitle")}</span>
         </p>
-        <h1 className="2xl:leading-[5rem] 2xl:text-6xl xl:leading-[4rem] xl:text-4xl leading-8 text-2xl font-medium xl:w-[64%] w-[90%] lg:my-[3rem] my-6 tracking-wider">
+        <h2 className="2xl:leading-[5rem] 2xl:text-6xl xl:leading-[4rem] xl:text-4xl leading-8 text-2xl font-medium xl:w-[64%] w-[90%] lg:my-[3rem] my-6 tracking-wider">
           {t("showcase.title")}
-        </h1>
+        </h2>
         <div className="sm:flex sm:gap-10 lg:text-lg sm:text-base text-sm ">
           <p className="flex items-center lg:gap-5 gap-3 w-[17rem]">
             <img src="/images/barg1.png" className="lg:h-16 h-10" alt="sa" />
@@ -39,7 +39,9 @@ function Showcase(props) {
             </button>
           </Link>
 
-          <p className="mt-3 ml-4">{t("showcase.promoText")}</p>
+          <p className="mt-3 ml-1 lg:text-lg sm:text-base text-sm">
+            {t("showcase.promoText")}
+          </p>
         </div>
       </div>
       {/* <div className="xl:absolute xl:top-0 xl:right-0 hidden xl:block">

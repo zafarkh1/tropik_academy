@@ -20,7 +20,7 @@ function Choose(props) {
 
   return (
     <div className="relative lg:px-[8rem] lg:py-[5rem] py-10 px-6">
-      <h2 className="text-center lg:text-4xl text-2xl font-semibold lg:mb-8">
+      <h2 className="text-center lg:text-5xl text-2xl font-semibold lg:mb-8">
         {t("choose.heading")}
       </h2>
       <div className="grid grid-cols-2 lg:grid-cols-3 lg:gap-8 gap-4 lg:mt-[3rem] mt-6">
