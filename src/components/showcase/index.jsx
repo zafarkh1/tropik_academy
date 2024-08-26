@@ -6,7 +6,7 @@ function Showcase(props) {
   const navbarHeight = 84;
 
   return (
-    <div className="mt-[6rem] md:ml-10 ml-3 relative">
+    <div className="mt-[6rem] md:ml-10 ml-3 relative overflow-hidden">
       <div>
         <p className="flex items-center gap-3">
           <img src="/images/Rectangle.png" alt="sa" className="h-[1px] w-10" />
@@ -44,9 +44,9 @@ function Showcase(props) {
           </p>
         </div>
       </div>
-      {/* <div className="xl:absolute xl:top-0 xl:right-0 hidden xl:block">
+      <div className="absolute top-0 right-[-15rem] hidden xl:block">
         <img src="/images/showcase.png" alt="showcase" />
-      </div> */}
+      </div>
     </div>
   );
 }

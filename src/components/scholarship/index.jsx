@@ -30,7 +30,7 @@ function Scholarship(props) {
             <h3 className="lg:text-3xl text-xl lg:mb-6 mb-3 font-medium">
               {t("scholarship.whatGKSProvidesTitle")}
             </h3>
-            <ul className="lg:text-lg md:text-base text-sm list-disc lg:leading-8 ml-5">
+            <ul className="lg:text-lg md:text-base text-sm list-disc lg:leading-8 ml-4">
               <li>{t("scholarship.whatGKSProvides.point1")}</li>
               <li>{t("scholarship.whatGKSProvides.point2")}</li>
               <li>{t("scholarship.whatGKSProvides.point3")}</li>

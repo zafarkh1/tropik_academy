@@ -37,21 +37,25 @@ function Modal({ onClose, heading, paragraph }) {
           isVisible ? "scale-100" : "scale-95"
         }`}
       >
-        <h2 className="text-center md:text-3xl font-medium mb-4">{heading}</h2>
-        <p className="text-center mb-6">{paragraph}</p>
+        <h2 className="text-center md:text-3xl text-xl font-medium mb-4">
+          {heading}
+        </h2>
+        <p className="text-center mb-6 lg:text-lg md:text-base text-sm">
+          {paragraph}
+        </p>
         <form onSubmit={sendMessage} className="flex flex-col gap-4">
           <input
             id="name"
             type="text"
             placeholder={t("message.name")}
-            className="px-5 py-4 rounded-md outline-none border"
+            className="px-5 py-4 rounded-md outline-none border lg:text-lg md:text-base text-sm"
             required
           />
           <input
             id="tel"
             type="tel"
             placeholder={t("message.tel")}
-            className="px-5 py-4 rounded-md outline-none border"
+            className="px-5 py-4 rounded-md outline-none border lg:text-lg md:text-base text-sm"
             required
           />
           <button className="bg-teal-400 text-white py-3 rounded-md hover:bg-teal-500 active:scale-95">
