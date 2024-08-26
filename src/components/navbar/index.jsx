@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import { FaTimes } from "react-icons/fa";
@@ -7,6 +7,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 function Navbar() {
   const { t, i18n } = useTranslation();
   const [open, setOpen] = useState(false);
+  const navbarRef = useRef(null);
 
   const navbarHeight = 84;
 
@@ -21,9 +22,23 @@ function Navbar() {
     i18n.changeLanguage(e.target.value);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (navbarRef.current && !navbarRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div
       id="navbar"
+      ref={navbarRef}
       className="w-full fixed top-0 left-0 bg-white shadow-md z-10"
     >
       <div className="lg:flex lg:justify-between lg:items-center lg:px-10 px-7 py-4">
@@ -55,7 +70,7 @@ function Navbar() {
           }`}
         >
           {list.map((item, index) => (
-            <li key={index} className="lg:text-xl text-base  lg:my-0 my-4">
+            <li key={index} className="lg:text-xl text-base lg:my-0 my-4">
               <Link
                 to={item.link}
                 spy={true}
@@ -64,13 +79,14 @@ function Navbar() {
                 duration={1500}
                 href={item.link}
                 className="text-gray-800 hover:text-gray-400 transition-colors duration-500"
+                onClick={() => setOpen(false)} // Close menu on click
               >
                 {item.title}
               </Link>
             </li>
           ))}
 
-          <li className="lg:text-xl text-base  lg:my-0 my-4">
+          <li className="lg:text-xl text-base lg:my-0 my-4">
             <a
               href="tel:+998333060098"
               className="text-gray-800 hover:text-gray-400 transition-colors duration-500"

@@ -14,11 +14,19 @@ function Modal({ onClose, heading, paragraph }) {
   useEffect(() => {
     setIsVisible(true);
 
+    // Disable scrolling
+    document.body.style.overflow = "hidden";
+
     if (success) {
       setTimeout(() => {
         handleClose();
       }, 1000);
     }
+
+    // Re-enable scrolling when modal is closed
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [success, handleClose]);
 
   return (
@@ -33,11 +41,11 @@ function Modal({ onClose, heading, paragraph }) {
       ></div>
 
       <div
-        className={`relative bg-white lg:w-1/3 md:w-2/3 w-[90%] p-10 rounded-lg shadow-lg z-10 transform transition-transform duration-300 ${
+        className={`relative bg-white lg:w-1/3 md:w-2/3 w-[90%] lg:px-10 sm:py-10 py-8 px-10 rounded-lg shadow-lg z-10 transform transition-transform duration-300 ${
           isVisible ? "scale-100" : "scale-95"
         }`}
       >
-        <h2 className="text-center md:text-3xl text-xl font-medium mb-4">
+        <h2 className="text-center md:text-3xl text-2xl font-medium mb-4">
           {heading}
         </h2>
         <p className="text-center mb-6 lg:text-lg md:text-base text-sm">
