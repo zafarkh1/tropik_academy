@@ -55,10 +55,7 @@ function Navbar() {
           }`}
         >
           {list.map((item, index) => (
-            <li
-              key={index}
-              className="lg:text-xl md:text-base text-sm lg:my-0 my-4"
-            >
+            <li key={index} className="lg:text-xl text-base  lg:my-0 my-4">
               <Link
                 to={item.link}
                 spy={true}
@@ -73,7 +70,7 @@ function Navbar() {
             </li>
           ))}
 
-          <li className="lg:text-xl md:text-base text-sm lg:my-0 my-4">
+          <li className="lg:text-xl text-base  lg:my-0 my-4">
             <a
               href="tel:+998333060098"
               className="text-gray-800 hover:text-gray-400 transition-colors duration-500"
@@ -85,7 +82,7 @@ function Navbar() {
           <li className="lg:mb-0 mb-4">
             <select
               onChange={handleChange}
-              className="bg-white border border-gray-300 text-gray-800 outline-none py-1 px-2 rounded-lg"
+              className="lg:text-xl text-base bg-white border border-gray-300 text-gray-800 outline-none py-1 px-2 rounded-lg"
             >
               <option value="uz">O'zbekcha</option>
               <option value="ru">Русский</option>

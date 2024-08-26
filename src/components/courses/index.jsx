@@ -50,7 +50,7 @@ function Courses(props) {
             key={item.id}
             className="flex flex-col bg-gray-200 rounded-3xl overflow-hidden"
           >
-            <div className="h-48 md:h-60 w-full">
+            <div className="h-48 lg:h-60 w-full">
               <img
                 src={item.img}
                 alt={item.type}
@@ -58,7 +58,7 @@ function Courses(props) {
               />
             </div>
 
-            <div className="lg:px-6 px-4 py-4  flex flex-col justify-between flex-grow">
+            <div className="lg:px-5 px-4 py-3  flex flex-col justify-between flex-grow">
               <div className="flex items-center justify-between lg:mb-6 mb-3">
                 <p className="text-xl font-medium">{item.type}</p>
                 <button className="px-3 py-1 bg-teal-400 text-white text-xs rounded-md">{`${t(
@@ -67,12 +67,14 @@ function Courses(props) {
               </div>
               <p className="lg:mb-6 mb-3 lg:text-base text-sm">{item.desc}</p>
               <div className="mt-auto flex items-center justify-between">
-                <Button
-                  title={t("course.registerButton")}
-                  padding="0.3rem 1.2rem"
+                <button
+                  className="lg:px-8 sm:px-4 px-3 lg:py-2 py-1 lg:text-base text-sm lg:rounded-3xl rounded-lg shadow-md shadow-slate-400 bg-teal-400 text-white
+         hover:bg-teal-500 active:scale-95 transition-all duration-300 ease-in"
                   onClick={() => setSelectedItemId(item.id)}
-                />
-                <p className="text-teal-600">
+                >
+                  {t("course.registerButton")}
+                </button>
+                <p className="text-teal-600 lg:text-base text-sm">
                   {item.price} {t("course.perMonth")}
                 </p>
               </div>

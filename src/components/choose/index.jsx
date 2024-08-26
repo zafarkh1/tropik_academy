@@ -34,7 +34,7 @@ function Choose(props) {
                 className="lg:w-24 lg:h-24 w-16 h-16 object-contain"
               />
             </div>
-            <p className="lg:text-lg text-sm font-normal w-[80%]">
+            <p className="lg:text-lg md:text-base text-sm font-normal w-[80%]">
               {item.title}
             </p>
           </div>

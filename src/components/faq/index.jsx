@@ -49,8 +49,8 @@ function Faq() {
               className="flex justify-between items-center lg:text-xl bg-gray-100 hover:bg-gray-200 transition-all cursor-pointer lg:p-5 p-3 py-4"
               onClick={() => handleAccordion(item.id)}
             >
-              <p className="font-medium">{item.question}</p>
-              <span className="text-gray-600">
+              <p className="font-medium lg:text-xl">{item.question}</p>
+              <span className="text-gray-600 lg:text-xl text-lg ml-3">
                 {selected === item.id ? "-" : "+"}
               </span>
             </div>
