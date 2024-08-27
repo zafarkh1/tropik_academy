@@ -7,12 +7,15 @@ function Showcase(props) {
 
   return (
     <div className="mt-[6rem] md:ml-10 ml-3 relative overflow-hidden">
-      <div>
+      <div className="xl:block flex flex-col items-center justify-center">
         <p className="flex items-center gap-3">
           <img src="/images/Rectangle.png" alt="sa" className="h-[1px] w-10" />
           <span className="lg:text-lg text-sm">{t("showcase.subtitle")}</span>
         </p>
-        <h2 className="2xl:leading-[5rem] 2xl:text-6xl xl:leading-[4rem] xl:text-4xl leading-8 text-2xl font-medium xl:w-[64%] w-[90%] lg:my-[3rem] my-6 tracking-wider">
+        <h2
+          className="2xl:leading-[5rem] 2xl:text-6xl xl:leading-[4rem] xl:text-4xl leading-8 
+        text-2xl font-medium xl:w-[64%] w-[90%] lg:my-[3rem] my-6 tracking-wider xl:text-left text-center"
+        >
           {t("showcase.title")}
         </h2>
         <div className="sm:flex sm:gap-10 lg:text-lg sm:text-base text-sm ">
