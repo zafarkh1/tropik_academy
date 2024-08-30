@@ -10,6 +10,7 @@ function Navbar() {
   const navbarRef = useRef(null);
 
   const navbarHeight = 84;
+  const myLang = localStorage.getItem("i18nextLng");
 
   const list = [
     { title: t("whyUs"), link: "advantages" },
@@ -99,6 +100,7 @@ function Navbar() {
             <select
               onChange={handleChange}
               className="lg:text-xl text-base bg-white border border-gray-300 text-gray-800 outline-none py-1 px-2 rounded-lg"
+              value={myLang}
             >
               <option value="uz">O'zbekcha</option>
               <option value="ru">Русский</option>
