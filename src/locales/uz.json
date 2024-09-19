@@ -94,7 +94,16 @@
       "name": "Ism",
       "tel": "Telefon raqam",
       "sending" : "Yuborilmoqda",
-      "success": "Muvaffaqiyatli jo'natildi"
+      "success": "Muvaffaqiyatli jo'natildi",
+      "error": "Xabarni yuborishda xatolik yuz berdi",
+      "validation": {
+      "nameRequired": "Ism majburiy",
+      "nameMinLength": "Ism kamida 3 ta belgidan iborat bo'lishi kerak",
+      "nameNotNumber": "Ism raqam bo'lishi mumkin emas",
+      "telRequired": "Telefon raqami talab qilinadi",
+      "telInvalid": "Noto'g'ri telefon raqami",
+      "nameInvalidChars": "Ismda noto'g'ri belgilardan foydalanilgan"
+    }
     },
     "modal": {
       "btnFree": "Darsga bepul yozilish"

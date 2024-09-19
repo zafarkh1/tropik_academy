@@ -94,9 +94,18 @@
     "name": "Name",
     "tel": "Phone number",
     "sending": "Sending",
-    "success": "Successfully sent"
+    "success": "Successfully sent",
+    "error": "Occured error while sending a message",
+    "validation": {
+      "nameRequired": "Name is required",
+      "nameMinLength": "Name must be at least 3 characters long",
+      "nameNotNumber": "Name cannot be a number",
+      "telRequired": "Telephone number is required",
+      "telInvalid": "Invalid phone number",
+      "nameInvalidChars": "Name contains invalid characters"
+    }
 },
-"modal": {
+    "modal": {
       "btnFree": "Join free"
     }
 

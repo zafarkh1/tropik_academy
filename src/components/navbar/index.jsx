@@ -86,8 +86,8 @@ function Navbar() {
                 offset={-navbarHeight}
                 duration={1500}
                 href={item.link}
-                className="text-gray-800 hover:text-gray-400 transition-colors duration-500"
-                onClick={() => setOpen(false)} // Close menu on click
+                className="text-gray-800 lg:hover:text-gray-400 transition-colors duration-500"
+                onClick={() => setOpen(false)}
               >
                 {item.title}
               </Link>
@@ -97,7 +97,7 @@ function Navbar() {
           <li className="lg:text-xl text-base lg:my-0 my-4">
             <a
               href="tel:+998333060098"
-              className="text-gray-800 hover:text-gray-400 transition-colors duration-500"
+              className="text-gray-800 lg:hover:text-gray-400 transition-colors duration-500"
             >
               <p>+998 (33) 306 0098</p>
               <p>{t("connectNow")}</p>
@@ -106,7 +106,7 @@ function Navbar() {
           <li className="lg:mb-0 mb-4">
             <select
               onChange={handleChange}
-              className="lg:text-xl text-base bg-white border border-gray-300 text-gray-800 outline-none py-1 px-2 rounded-lg"
+              className="lg:text-xl text-base bg-white border border-gray-300 text-gray-800 outline-none py-1 px-2 rounded-lg cursor-pointer"
               value={myLang}
             >
               <option value="uz">O'zbekcha</option>

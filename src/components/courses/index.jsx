@@ -67,7 +67,7 @@ function Courses(props) {
               <div className="mt-auto flex items-center justify-between">
                 <button
                   className="lg:px-8 px-5 lg:py-2 py-1 lg:text-base text-sm lg:rounded-3xl rounded-lg shadow-md shadow-slate-400 bg-teal-400 text-white
-         hover:bg-teal-500 active:scale-95 transition-all duration-300 ease-in"
+         lg:hover:bg-teal-500 active:scale-95 transition-all duration-300 ease-in"
                   onClick={() => setSelectedItemId(item.id)}
                 >
                   {t("course.registerButton")}

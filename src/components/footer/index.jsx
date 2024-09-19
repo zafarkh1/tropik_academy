@@ -45,7 +45,7 @@ function Footer(props) {
                 offset={-navbarHeight}
                 duration={1500}
                 href={item.link}
-                className=" hover:text-gray-400 transition-colors duration-500 cursor-pointer"
+                className=" lg:hover:text-gray-400 transition-colors duration-500 cursor-pointer"
               >
                 {item.title}
               </Link>
@@ -58,7 +58,7 @@ function Footer(props) {
               <a
                 rel="noopener noreferrer"
                 href={item.link}
-                className="hover:text-gray-300 transition-colors duration-300"
+                className="lg:hover:text-gray-300 transition-colors duration-300"
                 target="_blank"
               >
                 {item.icon}

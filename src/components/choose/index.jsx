@@ -41,8 +41,8 @@ function Choose(props) {
       </div>
       <div className="flex justify-center mt-10">
         <button
-          className="lg:px-12 px-8 lg:py-6 py-3 lg:rounded-3xl rounded-lg shadow-md shadow-slate-400 bg-teal-400 text-white
-         hover:bg-teal-500 active:scale-95"
+          className="lg:px-12 px-8 lg:py-5 py-3 lg:rounded-3xl rounded-lg shadow-md shadow-slate-400 bg-teal-400 text-white
+         hover:bg-teal-500 active:scale-95 transition-all duration-300"
           onClick={() => setOpen(true)}
         >
           {t("choose.button")}
